@@ -1,0 +1,19 @@
+.bgCoverCenter{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bgCoverRight{
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bgCoverLeft{
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.u-content-none::before,
+.u-content-none::after {
+	content: none;
+}
