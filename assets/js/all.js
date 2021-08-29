@@ -70,4 +70,10 @@ var swiper = new Swiper(".js-swiper-teachers", {
     }
   }
 });
+var elem = document.querySelector('input[name="datepicker"]');
+var datepicker = new Datepicker(elem, {
+  buttonClass: 'btn primary',
+  nextArrow: '>',
+  prevArrow: '<'
+});
 //# sourceMappingURL=all.js.map
