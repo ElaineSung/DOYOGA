@@ -2,7 +2,7 @@ $(function() {
   console.log('Hello Bootstrap5');
 });
 // swiper
-var swiper = new Swiper(".js-courseSwiper", {
+var swiper = new Swiper(".js-swiper-course-feature", {
   slidesPerView: 1,
   spaceBetween: 30,
   breakpoints: {
@@ -12,7 +12,7 @@ var swiper = new Swiper(".js-courseSwiper", {
     },
   }
 });
-var swiper = new Swiper(".js-userSay-swiper", {
+var swiper = new Swiper(".js-swiper-user-recommend", {
   slidesPerColumnFill: 'row',
   slidesPerColumn: 3,
   slidesPerView: 1,
@@ -32,5 +32,39 @@ var swiper = new Swiper(".js-userSay-swiper", {
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
+  },
+});
+var swiper = new Swiper(".js-swiper-course-recommend", {
+  slidesPerView: 1.3,
+  spaceBetween: 30,
+  breakpoints: {
+    768:{
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+    992:{
+      slidesPerView: 4,
+      spaceBetween: 30,
+    },
+  },
+});
+var swiper = new Swiper(".js-swiper-teachers", {
+  slidesPerColumnFill: 'column',
+  slidesPerColumn: 4,
+  slidesPerView: 1,
+  spaceBetween: 0,
+  breakpoints: {
+    768:{
+      slidesPerColumnFill: 'row',
+      slidesPerColumn: 1,
+      slidesPerView: 2,
+      spaceBetween: 30,
+    },
+    992:{
+      slidesPerColumnFill: 'row',
+      slidesPerColumn: 1,
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
   },
 });

@@ -1,24 +1,20 @@
 
 .hero {
   @include background( "hero.jpg", no-repeat, cover, center bottom);
-  min-height: 600px;
+  min-height: 560px;
+  background-attachment: fixed;
 }
 
 .sellPoint {
-  &__item {
-    min-height: 420px;
-    &-1 {
-      background-image: url("../images/point-01.jpg");
-    }
-    &-2 {
-      background-image: url("../images/point-02.jpg");
-    }
-    &-3 {
-      background-image: url("../images/point-03.jpg");
-    }
-    @include media-breakpoint-between(md, lg) {
-      min-height: 252px;
-      padding: 1rem !important;
+  .card {
+    &-img {
+      min-height: 420px;
+      @include media-breakpoint-between(md, lg) {
+        min-height: 252px;
+        &-overlay {
+          padding: 1rem !important;
+        }
+      }
     }
   }
 }
@@ -26,8 +22,14 @@
   &__banner {
     height: 628px;
   }
+  @include media-breakpoint-down(md) {
+    &__img {
+      width: 48px;
+      height: 48px;
+    }
+  }
 }
-.course {
+.course-index {
   &__img {
     height: 446px;
   }
@@ -44,6 +46,42 @@
   &:hover {
     i {
       transform: translateX(4px);
+    }
+  }
+}
+.ratio-17x7 {
+  @include media-breakpoint-down(lg) {
+    --bs-aspect-ratio: 46%;
+  }
+  @include media-breakpoint-down(md) {
+    --bs-aspect-ratio: 100%;
+  }
+}
+.curriculum {
+  .table {
+    min-width: 920px;
+  }
+}
+.courseInfo__banner {
+  @include media-breakpoint-down(md) {
+    height: 218px;
+  }
+}
+.course {
+  .card-img {
+    height: 240px;
+  }
+  .badge {
+    left: 55px;
+  }
+}
+.courseTeachers {
+  .card {
+    @include media-breakpoint-up(md) {
+      min-height: 422px;
+    }
+    @include media-breakpoint-between(lg, xl) {
+      min-height: 470px;
     }
   }
 }

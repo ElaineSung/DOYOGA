@@ -8,36 +8,58 @@ $utilities: map-merge(
         class: pos,
       )
     ),
+    "top": map-merge(
+      map-get($utilities,"top"),
+      (
+        responsive: true,
+      )
+    ),
+    "bottom": map-merge(
+      map-get($utilities,"bottom"),
+      (
+        responsive: true,
+      )
+    ),
+    "start": map-merge(
+      map-get($utilities,"start"),
+      (
+        responsive: true,
+      )
+    ),
+    "end": map-merge(
+      map-get($utilities,"end"),
+      (
+        responsive: true,
+      )
+    ),
     "translate-middle": map-merge(
       map-get($utilities,"translate-middle"),
       (
         responsive: true,
       )
     ),
-    "width": (
-      responsive: true,  //add
-      property: width,
-      class: w,
-      values: (
-        25: 25%,
-        50: 50%,
-        75: 75%,
-        80: 80%,
-        100: 100%,
-        auto: auto
+    "width": map-merge(
+      map-get($utilities,"width"),
+      (
+        responsive: true,
       )
     ),
-    "height": (
-      responsive: true,  //add
-      property: height,
-      class: h,
-      values: (
-        25: 25%,
-        50: 50%,
-        75: 75%,
-        80: 80%,
-        100: 100%,
-        auto: auto,
+    "height": map-merge(
+      map-get($utilities,"height"),
+      (
+        responsive: true,
+      )
+    ),
+    "viewport-height": map-merge(
+      map-get($utilities,"viewport-height"),
+      (
+        responsive: true,
+        values: map-merge(
+          map-get(map-get($utilities, "viewport-height"), "values"),
+          ( 50: 50vh,
+            90: 90vh,
+          ),
+        ),
       )
     ),
     "justify-content": map-merge(

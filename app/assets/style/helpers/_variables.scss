@@ -270,7 +270,8 @@ $spacers: (
   14: $spacer * 3.5,  //56
   15: $spacer * 3.75, //60
   16: $spacer * 4,   //64
-  17: $spacer * 6.5, //104
+  17: $spacer * 5, //80
+  18: $spacer * 6.5, //104
 ) !default;
 
 $negative-spacers: if($enable-negative-margins, negativify-map($spacers), null) !default;
@@ -283,7 +284,12 @@ $negative-spacers: if($enable-negative-margins, negativify-map($spacers), null) 
 // scss-docs-start position-map
 $position-values: (
   0: 0,
+  10: 10%,
+  20: 20%,
+  30: 30%,
+  40: 40%,
   50: 50%,
+  80: 80%,
   100: 100%
 ) !default;
 // scss-docs-end position-map
@@ -362,7 +368,16 @@ $grid-columns:                12 !default;
 $grid-gutter-width:           1.875rem !default; // 1.5rem
 $grid-row-columns:            6 !default;
 
-$gutters: $spacers !default;
+// $gutters: $spacers !default;
+$gutters: (
+  0: 0,
+  1: $spacer * .25,   //4
+  2: $spacer * .5,    //8
+  4: $spacer * .9375, //15
+  5: $spacer,         //16
+  6: $spacer * 1.5,   //24
+  7: $grid-gutter-width,   //30
+);
 
 // Container padding
 
@@ -419,9 +434,13 @@ $transition-collapse:         height .35s ease !default;
 // scss-docs-start aspect-ratios
 $aspect-ratios: (
   "1x1": 100%,
-  "4x3": calc(3 / 4 * 100%),
-  "16x9": calc(9 / 16 * 100%),
-  "21x9": calc(9 / 21 * 100%)
+  "6x5": calc(6 / 5 * 100%), //83.33%
+  "4x3": calc(3 / 4 * 100%), //75%
+  "10x6": calc(6 / 10 * 100%), //60%
+  "16x9": calc(9 / 16 * 100%), //56.25%
+  "2x1": 50%,
+  "21x9": calc(9 / 21 * 100%),  //42.85%
+  "17x7": calc(7 / 17 * 100%)  //41.17647%
 ) !default;
 // scss-docs-end aspect-ratios
 // stylelint-enable function-disallowed-list
@@ -1108,7 +1127,7 @@ $card-spacer-y:                     $spacer !default;
 $card-spacer-x:                     $spacer !default;
 $card-title-spacer-y:               $spacer * .5 !default;
 $card-border-width:                 $border-width !default;
-$card-border-radius:                $border-radius !default;
+$card-border-radius:                1rem !default; //$border-radius
 $card-border-color:                 rgba($black, .125) !default;
 $card-inner-border-radius:          subtract($card-border-radius, $card-border-width) !default;
 $card-cap-padding-y:                $card-spacer-y * .5 !default;
