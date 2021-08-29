@@ -184,6 +184,12 @@ $utilities: map-merge(
         1000: 1000,
         9999: 9999,
       )
+    ),
+    "ratio": (
+      property: --bs-aspect-ratio,
+      class: ratio,
+      responsive: true,
+      values: ($aspect-ratios),
     )
   ),
 );

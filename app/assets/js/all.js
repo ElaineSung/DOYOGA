@@ -68,3 +68,9 @@ var swiper = new Swiper(".js-swiper-teachers", {
     },
   },
 });
+const elem = document.querySelector('input[name="datepicker"]');
+const datepicker = new Datepicker(elem, {
+  buttonClass: 'btn primary',
+  nextArrow: '>',
+  prevArrow: '<'
+}); 

@@ -405,6 +405,7 @@ $border-color:                $gray-300 !default;
 $border-radius:               .25rem !default;
 $border-radius-sm:            .2rem !default;
 $border-radius-lg:            .3rem !default;
+$border-radius-xl:           1rem !default; //add
 $border-radius-pill:          50rem !default;
 // scss-docs-end border-radius-variables
 
@@ -434,13 +435,15 @@ $transition-collapse:         height .35s ease !default;
 // scss-docs-start aspect-ratios
 $aspect-ratios: (
   "1x1": 100%,
-  "6x5": calc(6 / 5 * 100%), //83.33%
-  "4x3": calc(3 / 4 * 100%), //75%
-  "10x6": calc(6 / 10 * 100%), //60%
-  "16x9": calc(9 / 16 * 100%), //56.25%
   "2x1": 50%,
-  "21x9": calc(9 / 21 * 100%),  //42.85%
-  "17x7": calc(7 / 17 * 100%)  //41.17647%
+  "4x3": calc(3 / 4 * 100%), //75%
+  "6x5": calc(6 / 5 * 100%), //83.33%
+  "10x6": calc(6 / 10 * 100%), //60%
+  "12x19": calc(19 / 12 * 100%),  //63%
+  "16x9": calc(9 / 16 * 100%), //56.25%
+  "17x7": calc(7 / 17 * 100%), //41.17647%
+  "21x9": calc(9 / 21 * 100%), //42.85%
+  
 ) !default;
 // scss-docs-end aspect-ratios
 // stylelint-enable function-disallowed-list
@@ -739,7 +742,7 @@ $input-disabled-bg:                     $gray-200 !default;
 $input-disabled-border-color:           null !default;
 
 $input-color:                           $body-color !default;
-$input-border-color:                    $gray-400 !default;
+$input-border-color:                    $secondary !default; //$gray-400
 $input-border-width:                    $input-btn-border-width !default;
 $input-box-shadow:                      $box-shadow-inset !default;
 
@@ -773,7 +776,7 @@ $input-transition:                      border-color .15s ease-in-out, box-shado
 $form-check-input-width:                  1em !default;
 $form-check-min-height:                   $font-size-base * $line-height-base !default;
 $form-check-padding-start:                $form-check-input-width + .5em !default;
-$form-check-margin-bottom:                .125rem !default;
+$form-check-margin-bottom:                .25rem !default; // .125rem
 $form-check-label-color:                  null !default;
 $form-check-label-cursor:                 null !default;
 $form-check-transition:                   null !default;
@@ -781,7 +784,7 @@ $form-check-transition:                   null !default;
 $form-check-input-active-filter:          brightness(90%) !default;
 
 $form-check-input-bg:                     $input-bg !default;
-$form-check-input-border:                 1px solid rgba($black, .25) !default;
+$form-check-input-border:                 1px solid $secondary !default; //1px solid rgba($black, .25)
 $form-check-input-border-radius:          .25em !default;
 $form-check-radio-border-radius:          50% !default;
 $form-check-input-focus-border:           $input-focus-border-color !default;
@@ -1280,11 +1283,11 @@ $modal-dialog-margin-y-sm-up:       1.75rem !default;
 
 $modal-title-line-height:           $line-height-base !default;
 
-$modal-content-color:               null !default;
-$modal-content-bg:                  $white !default;
-$modal-content-border-color:        rgba($black, .2) !default;
-$modal-content-border-width:        $border-width !default;
-$modal-content-border-radius:       $border-radius-lg !default;
+$modal-content-color:               $white !default;
+$modal-content-bg:                  $secondary !default;
+$modal-content-border-color:        rgba($white, .2) !default;
+$modal-content-border-width:        0 !default;
+$modal-content-border-radius:       $border-radius-xl !default;
 $modal-content-inner-border-radius: subtract($modal-content-border-radius, $modal-content-border-width) !default;
 $modal-content-box-shadow-xs:       $box-shadow-sm !default;
 $modal-content-box-shadow-sm-up:    $box-shadow !default;
