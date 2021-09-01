@@ -29,7 +29,7 @@
   --bs-dark: #707070;
   --bs-white: #fff;
   --bs-black: #000;
-  --bs-font-sans-serif: source-han-sans-traditional, sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --bs-font-sans-serif: "source-han-sans-traditional", sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
 }
@@ -2238,7 +2238,7 @@ progress {
   width: 100%;
   padding: 0.375rem 0.75rem;
   font-size: 1rem;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.5;
   color: #907A7B;
   background-color: #fff;
@@ -2473,7 +2473,7 @@ textarea.form-control-lg {
   padding: 0.375rem 2.25rem 0.375rem 0.75rem;
   -moz-padding-start: calc(0.75rem - 3px);
   font-size: 1rem;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.5;
   color: #907A7B;
   background-color: #fff;
@@ -2930,7 +2930,7 @@ textarea.form-control-lg {
           align-items: center;
   padding: 0.375rem 0.75rem;
   font-size: 1rem;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.5;
   color: #907A7B;
   text-align: center;
@@ -7428,6 +7428,10 @@ fieldset:disabled .btn {
   --bs-aspect-ratio: calc(6 / 10 * 100%);
 }
 
+.ratio-11x6 {
+  --bs-aspect-ratio: calc(6 / 11 * 100%);
+}
+
 .ratio-12x19 {
   --bs-aspect-ratio: calc(19 / 12 * 100%);
 }
@@ -10561,6 +10565,10 @@ fieldset:disabled .btn {
   --bs-aspect-ratio: calc(6 / 10 * 100%) !important;
 }
 
+.ratio-11x6 {
+  --bs-aspect-ratio: calc(6 / 11 * 100%) !important;
+}
+
 .ratio-12x19 {
   --bs-aspect-ratio: calc(19 / 12 * 100%) !important;
 }
@@ -12555,6 +12563,9 @@ fieldset:disabled .btn {
   .ratio-sm-10x6 {
     --bs-aspect-ratio: calc(6 / 10 * 100%) !important;
   }
+  .ratio-sm-11x6 {
+    --bs-aspect-ratio: calc(6 / 11 * 100%) !important;
+  }
   .ratio-sm-12x19 {
     --bs-aspect-ratio: calc(19 / 12 * 100%) !important;
   }
@@ -14546,6 +14557,9 @@ fieldset:disabled .btn {
   }
   .ratio-md-10x6 {
     --bs-aspect-ratio: calc(6 / 10 * 100%) !important;
+  }
+  .ratio-md-11x6 {
+    --bs-aspect-ratio: calc(6 / 11 * 100%) !important;
   }
   .ratio-md-12x19 {
     --bs-aspect-ratio: calc(19 / 12 * 100%) !important;
@@ -16539,6 +16553,9 @@ fieldset:disabled .btn {
   .ratio-lg-10x6 {
     --bs-aspect-ratio: calc(6 / 10 * 100%) !important;
   }
+  .ratio-lg-11x6 {
+    --bs-aspect-ratio: calc(6 / 11 * 100%) !important;
+  }
   .ratio-lg-12x19 {
     --bs-aspect-ratio: calc(19 / 12 * 100%) !important;
   }
@@ -18530,6 +18547,9 @@ fieldset:disabled .btn {
   }
   .ratio-xl-10x6 {
     --bs-aspect-ratio: calc(6 / 10 * 100%) !important;
+  }
+  .ratio-xl-11x6 {
+    --bs-aspect-ratio: calc(6 / 11 * 100%) !important;
   }
   .ratio-xl-12x19 {
     --bs-aspect-ratio: calc(19 / 12 * 100%) !important;
@@ -20523,6 +20543,9 @@ fieldset:disabled .btn {
   .ratio-xxl-10x6 {
     --bs-aspect-ratio: calc(6 / 10 * 100%) !important;
   }
+  .ratio-xxl-11x6 {
+    --bs-aspect-ratio: calc(6 / 11 * 100%) !important;
+  }
   .ratio-xxl-12x19 {
     --bs-aspect-ratio: calc(19 / 12 * 100%) !important;
   }
@@ -20690,8 +20713,7 @@ ul {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center bottom;
-  min-height: 560px;
-  background-attachment: fixed;
+  min-height: 582px;
 }
 
 .sellPoint .card-img {
