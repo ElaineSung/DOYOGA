@@ -1,8 +1,7 @@
 
 .hero {
   @include background( "hero.jpg", no-repeat, cover, center bottom);
-  min-height: 560px;
-  background-attachment: fixed;
+  min-height: 582px;
 }
 
 .sellPoint {

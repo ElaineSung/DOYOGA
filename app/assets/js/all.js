@@ -68,6 +68,26 @@ var swiper = new Swiper(".js-swiper-teachers", {
     },
   },
 });
+var swiper = new Swiper(".js-swiper-select-course", {
+  slidesPerColumnFill: 'column',
+  slidesPerColumn: 3,
+  slidesPerView: 1,
+  spaceBetween: 24,
+  breakpoints: {
+    768:{
+      slidesPerColumnFill: 'row',
+      slidesPerColumn: 1,
+      slidesPerView: 2,
+      spaceBetween: 30,
+    },
+    992:{
+      slidesPerColumnFill: 'row',
+      slidesPerColumn: 1,
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+  },
+});
 const elem = document.querySelector('input[name="datepicker"]');
 const datepicker = new Datepicker(elem, {
   buttonClass: 'btn primary',
