@@ -20624,6 +20624,10 @@ ul {
   list-style: none;
 }
 
+textarea {
+  resize: none;
+}
+
 /* 內文溢出-多行 */
 .bgCoverCenter {
   background-position: center;
